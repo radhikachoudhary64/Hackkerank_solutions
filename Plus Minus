@@ -1,0 +1,29 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the plusMinus function below.
+def plusMinus(arr):
+    zero=pos=neg=0 #set zero,neg,pos = 0
+    for x in arr:
+        if x==0:        #check number is 0
+            zero+=1     #increase zero by 1
+        elif x>0:       #check number is positive
+            pos+=1      #increase pos by 1
+        else:           #else it will be a negative integer 
+            neg+=1      #increase neg by 1
+    print(pos/n)        #print positive fraction
+    print(neg/n)        #print negative fraction
+    print(zero/n)       #print zeros fraction
+
+
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    plusMinus(arr)
