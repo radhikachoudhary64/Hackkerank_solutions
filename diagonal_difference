@@ -1,0 +1,49 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#take number of rows from user...... rows and column will be same for square matrix
+n=int(input())
+def diagonalDifference(arr):
+    #we will intialize from 0,0
+    row=0
+    col=0
+    #right diagonal list and left diagonal list
+    rd=[]
+    ld=[]
+    for right in range(n):
+        #create list for right diagonal
+        rd.append(arr[row][col])
+        row+=1
+        col+=1
+
+    row=0
+    col=n-1 #col will be set to n-1 for correct indexing otherwise it will raise error - out of indexing
+    for left in range(n):
+        #create list for left diagonal
+        ld.append(arr[row][col]) #same append procedure for left diagonal
+        row+=1
+        col-=1 #Now row will increase and column will decrease by 1
+
+    total=sum(rd) #sum of right diagonal list
+    total-=sum(ld) #difference of right and left diagonal
+    return abs(total) #return absolute value
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+
+    arr = []
+
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    result = diagonalDifference(arr)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
