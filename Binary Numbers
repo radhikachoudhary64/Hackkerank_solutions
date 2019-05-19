@@ -1,5 +1,16 @@
-n = int(input().strip())
+#!/bin/python3
 
-numbers = str(bin(n)[2:]).split('0')
-lenghts = [len(num) for num in numbers]
-print(max(lenghts))
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    numbers = str(bin(n)[2:]).split('0')
+    lenghts = [len(num) for num in numbers]
+    print(max(lenghts))
