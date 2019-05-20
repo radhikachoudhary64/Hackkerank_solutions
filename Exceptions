@@ -1,0 +1,10 @@
+#!/bin/python3
+
+x=int(input())
+for x in range(x):
+    
+    try:
+        a,b=(map(int,input().split()))
+        print(a//b)
+    except Exception as e:
+        print('Error Code:',e)
