@@ -3,16 +3,16 @@
 class Difference:
     def __init__(self, a):
         self.__elements = a
-    maximumDifference=0
+    maximumDifference=0  #instance variable created
     
     
-    def computeDifference(self):
+    def computeDifference(self):   #method to compute max difference
         
         for x in a:
             for y in a[1:]:
                 if abs(x-y)>Difference.maximumDifference:
                     Difference.maximumDifference=abs(x-y)
-	# Add your code here
+	
 
 # End of Difference class
 
