@@ -1,0 +1,12 @@
+#!/bin/python3
+
+from collections import Counter
+n=int(input())
+lis=[]
+for x in range(n):
+    lis.append(input())
+col_count = Counter(lis)
+print(len(col_count))
+for _ in col_count.values():
+    print(_,end=' ')
+
