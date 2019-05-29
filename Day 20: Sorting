@@ -1,0 +1,22 @@
+#!/bin/python3
+
+import sys
+
+n = int(input().strip())
+a = list(map(int, input().strip().split(' ')))
+
+num_swap=0
+
+for x in range(len(a)):
+    for y in range(len(a)-1):
+        if a[y]>a[y+1]:
+            temp=a[y]
+            a[y]=a[y+1]
+            a[y+1]=temp
+            num_swap+=1
+    if num_swap==0:
+        break
+
+print('Array is sorted in {} swaps.'.format(num_swap))
+print('First Element: {}'.format(a[0]))
+print('Last Element: {}'.format(a[-1]))
