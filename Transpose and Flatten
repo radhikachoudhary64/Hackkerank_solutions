@@ -1,0 +1,10 @@
+#!/bin/python3
+
+import numpy
+lis=[]
+s=list(map(int,input().split()))
+for x in range(s[0]):
+    lis.append(list(map(int,input().split())))
+
+print(numpy.transpose(lis))
+print((numpy.array(lis)).flatten())
