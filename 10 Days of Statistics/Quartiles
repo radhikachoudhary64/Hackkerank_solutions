@@ -1,0 +1,10 @@
+#!/bin/python3
+
+import statistics
+size=int(input())
+X=list(map(int,input().split()))
+upper=[int(x) for x in sorted(X) if x<statistics.median(sorted(X))]
+lower=[int(x) for x in sorted(X) if x>statistics.median(sorted(X))]
+print(int(statistics.median(upper)))
+print(int(statistics.median(sorted(X))))
+print(int(statistics.median(lower)))
