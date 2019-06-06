@@ -1,0 +1,16 @@
+#!/bin/python3
+
+from collections import deque
+d=deque()
+for x in range(int(input())):
+    y=input().split()
+    if y[0]=='append':
+        d.append(y[1])
+    elif y[0]=='pop':
+        d.pop()
+    elif y[0]=='popleft':
+        d.popleft()
+    elif y[0]=='appendleft':
+        d.appendleft(y[1])
+    
+print(*d)
