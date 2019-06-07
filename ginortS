@@ -1,0 +1,21 @@
+#!/bin/python3
+
+caps=[]
+even=[]
+odd=[]
+lower=[]
+a=input()
+
+for x in a:
+    if x.isupper():
+        caps.append(x)
+    elif x.islower():
+        lower.append(x)
+    elif x.isdigit() and int(x)%2==0:
+        even.append(x)
+    elif x.isdigit() and int(x)%2!=0:
+        odd.append(x)
+print(''.join(sorted(lower)),end='')
+print(''.join(sorted(caps)),end='')
+print(''.join(sorted(odd)),end='')
+print(''.join(sorted(even)),end='')
