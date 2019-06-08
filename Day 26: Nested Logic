@@ -1,0 +1,12 @@
+#!/bin/python3
+
+actual=list(map(int,input().split()))
+expected=list(map(int,input().split()))
+if actual[0]-expected[0]>0 and actual[1]-expected[1]==0 and actual[2]-expected[2]==0:
+    print(15*(actual[0]-expected[0]))
+elif actual[1]-expected[1]>0 and actual[2]-expected[2]==0:
+    print(500*(actual[1]-expected[1]))
+elif actual[2]-expected[2]>0:
+    print(10000)
+else:
+    print(0)
