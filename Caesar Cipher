@@ -1,0 +1,42 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the caesarCipher function below.
+def caesarCipher(s, k):
+    import string
+    a=list(string.ascii_lowercase)
+    b=list(string.ascii_uppercase)
+    new=[]
+    for v in s:
+        if v in a:
+            if a.index(v)+k%26 <= len(a)-1:
+                new.append(a[a.index(v)+k%26])
+            else:
+                new.append(a[a.index(v)+k%26-len(a)])
+        elif v in b:
+            if b.index(v)+k%26 <= len(b)-1:
+                new.append(b[b.index(v)+k%26])
+            else:
+                new.append(b[b.index(v)+k%26-len(b)])
+        else:
+            new.append(v)
+    return ''.join(new)
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    s = input()
+
+    k = int(input())
+
+    result = caesarCipher(s, k)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
